@@ -46,12 +46,11 @@
 #
 # Pull base image
 # ---------------
-# FROM store/oracle/weblogic:12.2.1.3
-FROM store/oracle/weblogic:12.2.1.3-dev
+FROM my-weblogic-base-image:12.2.1.3.0
 
 # Maintainer
 # ----------
-MAINTAINER Richard Killen <richard.killen@oracle.com>
+MAINTAINER Mark Nelson <mark.x.nelson@oracle.com>
 
 ARG WDT_ARCHIVE
 ARG WDT_VARIABLE
