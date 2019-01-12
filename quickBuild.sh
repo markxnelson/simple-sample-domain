@@ -18,5 +18,5 @@ docker build \
     --build-arg WDT_VARIABLE=properties/docker-build/domain.properties \
     --build-arg WDT_ARCHIVE=archive.zip \
     --force-rm=true \
-    -t 12213-domain-home-in-image-wdt .
+    -t my-domain1-image:1.0 .
 
