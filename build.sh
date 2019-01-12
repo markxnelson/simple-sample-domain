@@ -220,7 +220,7 @@ set_context() {
    echo "Context for docker build is ${scriptDir}"
 }
 
-# Build the simple-app war and put the application in an archive file.
+# Build the test-webapp war and put the application in an archive file.
 # The archive is required by the simple-topology.yaml model file
 # The build will only warn and not fail if cannot build the war and archive file
 build_archive() {
