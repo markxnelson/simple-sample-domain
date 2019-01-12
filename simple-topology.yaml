@@ -30,8 +30,8 @@ topology:
 appDeployments:
     Application:
         # Quote needed because of hyphen in string
-        'simple-app':
-            SourcePath: 'wlsdeploy/applications/simple-app.war'
+        'test-webapp':
+            SourcePath: 'wlsdeploy/applications/test-webapp.war'
             Target: '@@PROP:CLUSTER_NAME@@'
             ModuleType: war
             StagingMode: nostage
