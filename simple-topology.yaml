@@ -31,7 +31,7 @@ appDeployments:
     Application:
         # Quote needed because of hyphen in string
         'test-webapp':
-            SourcePath: 'wlsdeploy/applications/test-webapp.war'
+            SourcePath: 'wlsdeploy/applications/testwebapp.war'
             Target: '@@PROP:CLUSTER_NAME@@'
             ModuleType: war
             StagingMode: nostage

@@ -26,5 +26,5 @@ fi
 rm -Rf ${scriptDir}/archive
 mkdir -p ${scriptDir}/archive/wlsdeploy/applications
 cd test-webapp && mvn clean install && cd ..
-${JAVA_HOME}/bin/jar cvf ${scriptDir}/archive/wlsdeploy/applications/test-webapp.war -C ${scriptDir} test-webapp/* 
+cp test-webapp/target/testwebapp.war ${scriptDir}/archive/wlsdeploy/applications/testwebapp.war
 ${JAVA_HOME}/bin/jar cvf ${scriptDir}/archive.zip  -C ${scriptDir}/archive wlsdeploy
