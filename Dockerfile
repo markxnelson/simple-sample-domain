@@ -135,6 +135,9 @@ RUN if [ -n "$WDT_MODEL" ]; then MODEL_OPT="-model_file $PROPERTIES_FILE_DIR/${W
         echo ". $DOMAIN_HOME/bin/setDomainEnv.sh" >> /u01/oracle/.bashrc && \
         rm -rf $PROPERTIES_FILE_DIR 
 
+# copy in logging exporter config
+COPY WebLogicLoggingExporter.yaml $DOMAIN_HOME/config/
+
 # Mount the domain home and the WDT home for easy access.
 VOLUME $DOMAIN_HOME
 VOLUME $WDT_HOME
