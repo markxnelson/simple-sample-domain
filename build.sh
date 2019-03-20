@@ -59,9 +59,12 @@ echo 'Build the WDT archive...'
 rm archive.zip
 ${JAVA_HOME}/bin/jar cvf ${scriptDir}/archive.zip  -C ${scriptDir}/archive wlsdeploy
 
+echo 'Download WDT...'
+wget -O weblogic-deploy.zip \
+     https://github.com/oracle/weblogic-deploy-tooling/releases/download/weblogic-deploy-tooling-0.20/weblogic-deploy.zip
 
 echo 'Build the domain image...'
-. container-scripts/setEnv.sh properties/docker-build/domain.properties
+container-scripts/setEnv.sh properties/docker-build/domain.properties
 
 docker build \
     $BUILD_ARG \

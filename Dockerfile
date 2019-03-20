@@ -17,9 +17,6 @@
 #
 # HOW TO BUILD THIS IMAGE
 # -----------------------
-
-# Build the deployment archive file using the build-archive.sh script.
-#      $ ./build-archive.sh
 #
 # Run:
 #      $ sudo docker build \
@@ -46,7 +43,7 @@
 #
 # Pull base image
 # ---------------
-FROM my-weblogic-base-image:12.2.1.3.0
+FROM store/oracle/weblogic:12.2.1.3
 
 # Maintainer
 # ----------
