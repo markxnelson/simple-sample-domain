@@ -45,14 +45,15 @@ wget -O ${scriptDir}/archive/wlsdeploy/snakeyaml-1.23.jar \
      http://repo1.maven.org/maven2/org/yaml/snakeyaml/1.23/snakeyaml-1.23.jar
 
 echo ' - metrics exporter...'
+rm -rf weblogic-monitoring-exporter
 git clone https://github.com/oracle/weblogic-monitoring-exporter
 cd weblogic-monitoring-exporter
 mvn clean install 
 cd webapp
 mvn clean package -Dconfiguration=../../exporter-config.yaml
 cd ../..
-cp weblogic-monitoring-exporter/webapp/target/weblogic-monitoring-exporter.jar \
-   ${scriptDir}/archive/wlsdeploy/applications/weblogic-monitoring-extporter.jar
+cp weblogic-monitoring-exporter/webapp/target/wls-exporter.war \
+   ${scriptDir}/archive/wlsdeploy/applications/wls-extporter.war
 
 echo 'Build the WDT archive...'
 rm archive.zip
