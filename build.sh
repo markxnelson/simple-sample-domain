@@ -32,17 +32,17 @@ fi
 
 rm -Rf ${scriptDir}/archive
 mkdir -p ${scriptDir}/archive/wlsdeploy/applications
-mkdir -p ${scriptDir}/archive/wlsdeploy/deployLibraries
+mkdir -p ${scriptDir}/archive/wlsdeploy/domainLibraries
 
 echo ' - test webapp...'
 cd test-webapp && mvn clean install && cd ..
 cp test-webapp/target/testwebapp.war ${scriptDir}/archive/wlsdeploy/applications/testwebapp.war
 
 echo ' - logging exporter...'
-wget -O ${scriptDir}/archive/wlsdeploy/deployLibraries/weblogic-logging-exporter-0.1.jar \
+wget -O ${scriptDir}/archive/wlsdeploy/domainLibraries/weblogic-logging-exporter-0.1.jar \
      https://github.com/oracle/weblogic-logging-exporter/releases/download/v0.1/weblogic-logging-exporter-0.1.jar
 
-wget -O ${scriptDir}/archive/wlsdeploy/deployLibraries/snakeyaml-1.23.jar \
+wget -O ${scriptDir}/archive/wlsdeploy/domainLibraries/snakeyaml-1.23.jar \
      http://repo1.maven.org/maven2/org/yaml/snakeyaml/1.23/snakeyaml-1.23.jar
 
 echo ' - metrics exporter...'
