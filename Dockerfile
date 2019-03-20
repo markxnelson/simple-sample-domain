@@ -56,7 +56,7 @@ ARG CUSTOM_ADMIN_NAME=admin-server
 ARG CUSTOM_ADMIN_HOST=wlsadmin
 ARG CUSTOM_ADMIN_PORT=7001
 ARG CUSTOM_MANAGED_SERVER_PORT=8001
-ARG CUSTOM_DOMAIN_NAME=base_domain
+ARG CUSTOM_DOMAIN_NAME=domain1
 ARG CUSTOM_DEBUG_PORT=8453
 
 # Persist arguments - for ports to expose and container to use
