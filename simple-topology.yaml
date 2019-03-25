@@ -14,7 +14,7 @@ topology:
                 CalculatedListenPorts: false
                 ServerNamePrefix: '@@PROP:MANAGED_SERVER_NAME_BASE@@'
                 DynamicClusterSize: '@@PROP:CONFIGURED_MANAGED_SERVER_COUNT@@'
-                MaxDynamicClusterSize: '@@PROP:CONFIGURED_MANAGED_SERVER_COUNT@@'
+                MaxDynamicClusterSize: '@@PROP:CONFIGURED_MANAGED_SERVER_MAX@@'
     Server:
         '@@PROP:ADMIN_NAME@@':
             ListenPort: '@@PROP:ADMIN_PORT@@'
